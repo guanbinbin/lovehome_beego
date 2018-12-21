@@ -31,7 +31,7 @@ func TransparentStatic(ctx *context.Context) {
 	beego.Info("url:", ctx.Request.URL)
 	beego.Info("path", orpath)
 	beego.Debug("request url: ", orpath)
-	//如果请求uri还有api字段,说明是指令应该取消静态资源路径重定向
+	//如果请求uri含有api字段,说明是指令应该取消静态资源路径重定向
 	if strings.Index(orpath, "api") >= 0 {
 		return
 	}
